@@ -1,0 +1,26 @@
+{
+  "name": "dolphin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saralein/dolphin.git"
+  },
+  "author": "Sara Trujillo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saralein/dolphin/issues"
+  },
+  "homepage": "https://github.com/saralein/dolphin#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "faker": "^4.1.0",
+    "jasmine": "^2.6.0",
+    "nodemon": "^1.11.0"
+  }
+}
