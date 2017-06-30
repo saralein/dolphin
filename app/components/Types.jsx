@@ -15,14 +15,25 @@ const showCategories = (categories, activeCategory, updateCategory) => {
   })
 }
 
-const showExamples = (type, num) => {
+const showExamples = (type, activeCategory, num) => {
   const examples = [];
 
   for (let i = 0; i < num; i++) {
-    examples.push(<span key={`${type}-${i}`}className="example">{faker.name[type]()}<br /></span>)
+    examples.push(<span key={`${type}-${i}`}className="example">{faker[activeCategory][type]()}<br /></span>)
   }
 
   return examples;
+}
+
+const showTypes = activeCategory => {
+  console.log('keys', Object.keys(activeCategory), faker[activeCategory])
+  return Object.keys(faker[activeCategory]).map(type => {
+    return (
+      <li key={type}>{type}<br />
+        {showExamples(type, activeCategory, 3).map(ex => ex)}
+      </li>
+    )
+  })
 }
 
 const Types = ({toggleModal, categories, activeCategory, updateCategory}) => {
@@ -40,15 +51,7 @@ const Types = ({toggleModal, categories, activeCategory, updateCategory}) => {
       </ul>
 
       <ul>
-        {
-          Object.keys(faker.name).map(type => {
-            return (
-              <li key={type}>{type}<br />
-                {showExamples(type, 3).map(ex => ex)}
-              </li>
-            );
-          })
-        }
+        {showTypes(activeCategory)}
       </ul>
     </div>
   )
