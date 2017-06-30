@@ -1,1 +1,2 @@
 export const SHOW_TYPES = 'SHOW_TYPES';
+export const CHANGE_CATEGORY = 'CHANGE_CATEGORY';

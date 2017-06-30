@@ -1,4 +1,4 @@
-import {SHOW_TYPES} from '../constants';
+import {SHOW_TYPES, CHANGE_CATEGORY} from '../constants';
 
 const initialState = {
   showTypes: false,
@@ -8,6 +8,7 @@ const initialState = {
     'internet', 'lorem', 'name',
     'phone', 'random'
   ],
+  activeCategory: 'name'
 }
 
 const reducer = (state = initialState, action) => {
@@ -16,6 +17,9 @@ const reducer = (state = initialState, action) => {
   switch (action.type){
     case SHOW_TYPES:
       newState.showTypes = !newState.showTypes;
+      break;
+    case CHANGE_CATEGORY:
+      newState.activeCategory = action.activeCategory;
       break;
     default:
       return state
