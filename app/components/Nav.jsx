@@ -3,8 +3,11 @@ import React from 'react';
 
 const Nav = () => {
   return (
-    <ul className="menu">
-      <li className="menu-text">Porpoise</li>
+    <ul className="nav menu">
+      <li className="menu-text">
+        <img id="logo" src="/img/porpoise-logo.png" />
+        <span>Data with a Porpoise</span>
+      </li>
       <li><a href="#">Sign in</a></li>
     </ul>
   )

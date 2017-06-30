@@ -1,4 +1,20 @@
-body {
+.nav {
+  color: white;
+  background-color: #1779ba;
+  margin-bottom: 3rem;
+}
+
+.nav a {
+  color: white;
+}
+
+#logo {
+  height: 1rem;
+  width: auto;
+  padding-right: 1rem;
+}
+
+.container {
   padding: 2rem;
 }
 
@@ -31,13 +47,13 @@ body {
   text-transform: capitalize;
 }
 
-.align-right {
-  text-align: right;
-  padding-right: 1rem;
+.types li {
+  list-style-type: none;
 }
 
 .x {
   color: #cacaca;
+  padding-right: 2rem;
 }
 
 .size-18 {
@@ -46,4 +62,15 @@ body {
 
 .pad-right {
   padding-right: 1rem;
+}
+
+.example {
+  color: #cacaca;
+  font-size: 14px;
+  display: block;
+  line-height: 1.25;
+}
+
+.type-name {
+  margin-top: 2rem;
 }
