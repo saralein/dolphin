@@ -37,7 +37,7 @@ const Field = () => {
                 <div className="medium-6 cell">
                   <div className="input-group">
                     <input className="input-group-field" type="text" defaultValue={fields[field].type} />
-                    <span className="input-group-label">$</span>
+                    <span onClick={() => console.log('hi')} className="input-group-label"><i className="fi-pencil"></i></span>
                   </div>
                 </div>
               </div>
