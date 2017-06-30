@@ -1,6 +1,20 @@
 import React from 'react';
 import faker from 'faker';
 
+const showCategories = (categories, activeCategory, updateCategory) => {
+  return categories.map(category => {
+    let style = '';
+
+    if (category === activeCategory) style = 'is-active';
+
+    return (
+      <li key={category} className={style}>
+        <a href="#" onClick={() => updateCategory(category)}>{category}</a>
+      </li>
+    )
+  })
+}
+
 const showExamples = (type, num) => {
   const examples = [];
 
@@ -11,14 +25,20 @@ const showExamples = (type, num) => {
   return examples;
 }
 
-const Types = () => {
+const Types = ({toggleModal, categories, activeCategory, updateCategory}) => {
   return (
     <div className="types">
-      <div className="align-right">
-        <i className="align-right x fi-x"></i>
+      <div
+        onClick={toggleModal}
+        className="align-right">
+          <i className="align-right x fi-x" />
       </div>
       <h5>Types</h5>
-      <span>Person</span>
+
+      <ul className="menu">
+        {showCategories(categories, activeCategory, updateCategory)}
+      </ul>
+
       <ul>
         {
           Object.keys(faker.name).map(type => {
