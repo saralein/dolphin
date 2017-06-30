@@ -15,7 +15,7 @@ const fields = {
   }
 }
 
-const Field = () => {
+const Field = ({toggleModal}) => {
   return (
     <div>
       <div className="grid-x grid-padding-x">
@@ -37,7 +37,11 @@ const Field = () => {
                 <div className="medium-6 cell">
                   <div className="input-group">
                     <input className="input-group-field" type="text" defaultValue={fields[field].type} />
-                    <span onClick={() => console.log('hi')} className="input-group-label"><i className="fi-pencil"></i></span>
+                    <span
+                      onClick={toggleModal}
+                      className="input-group-label">
+                        <i className="fi-pencil" />
+                    </span>
                   </div>
                 </div>
               </div>
