@@ -2,6 +2,9 @@ import React from 'react';
 
 import Nav from '../components/Nav';
 import Field from '../components/Field';
+import Types from '../components/Types';
+
+let showTypes = true;
 
 class Main extends React.Component {
   render() {
@@ -9,6 +12,7 @@ class Main extends React.Component {
       <div>
         <Nav />
         <Field />
+        {showTypes && <Types />}
       </div>
     )
   }
